@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../core/constrant/my_colors.dart';
+import '../../core/constrants/my_colors.dart';
 
 class CustomPrimaryButton extends StatelessWidget {
   final String title;
@@ -16,21 +16,22 @@ class CustomPrimaryButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: double.infinity,
-      height: 55.h,
+      height: 56.h,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
           backgroundColor: MyColors.bottonColor,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(10.r),
+            borderRadius: BorderRadius.circular(11.r),
           ),
         ),
         onPressed: onTap,
         child: Text(
           title,
           style: TextStyle(
-            fontSize: 18.sp,
-            fontWeight: FontWeight.w600,
+            fontSize: 20.sp,
+            fontWeight: FontWeight.w500,
             color: MyColors.whiteColor,
+            fontFamily: 'Roboto',
           ),
         ),
       ),
@@ -52,12 +53,12 @@ class CustomOutlinedButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: double.infinity,
-      height: 55.h,
+      height: 56.h,
       child: OutlinedButton(
         style: OutlinedButton.styleFrom(
           side: BorderSide(color: MyColors.bottonColor, width: 1.5.w),
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(10.r),
+            borderRadius: BorderRadius.circular(11.r),
           ),
         ),
         onPressed: onTap,
@@ -67,6 +68,7 @@ class CustomOutlinedButton extends StatelessWidget {
             fontSize: 18.sp,
             fontWeight: FontWeight.w600,
             color: MyColors.bottonColor,
+            fontFamily: 'Roboto',
           ),
         ),
       ),

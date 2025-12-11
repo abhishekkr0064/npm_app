@@ -22,11 +22,7 @@ class _SplashState extends State<Splash> {
               const Spacer(flex: 3),
 
               /// Logo
-              Image.asset(
-                'assets/images/app_logo.png',
-                height: 110.h,
-                width: 114.w,
-              ),
+              Image.asset(MyAssets.assetslogo, height: 110.h, width: 114.w),
 
               SizedBox(height: 32.h),
 
@@ -34,18 +30,34 @@ class _SplashState extends State<Splash> {
               Text(
                 "Access medications\nat your fingertips",
                 textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 28.sp, fontWeight: FontWeight.w600),
+                style: TextStyle(
+                  fontSize: 33.sp,
+                  fontWeight: FontWeight.w600,
+                  fontFamily: 'Roboto',
+                ),
               ),
 
               const Spacer(flex: 2),
 
               /// Sign Up Button (Reusable)
-              CustomPrimaryButton(title: "Sign up for free", onTap: () {}),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 8),
+                child: CustomPrimaryButton(
+                  title: "Sign up for free",
+                  onTap: () => AutoRouter.of(context).push(RegisterRoute()),
+                ),
+              ),
 
               SizedBox(height: 15.h),
 
               /// Login Button (Reusable)
-              CustomOutlinedButton(title: "Log in", onTap: () {}),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 8),
+                child: CustomOutlinedButton(
+                  title: "Log in",
+                  onTap: () => AutoRouter.of(context).push(LoginRoute()),
+                ),
+              ),
 
               const Spacer(),
 
@@ -60,16 +72,23 @@ class _SplashState extends State<Splash> {
                       color: MyColors.blackColor,
                       fontSize: 14.sp,
                       fontWeight: FontWeight.w500,
+                      fontFamily: 'Roboto',
                     ),
                     children: [
                       TextSpan(
                         text: "Privacy policy",
-                        style: TextStyle(color: MyColors.bottonColor),
+                        style: TextStyle(
+                          color: MyColors.bottonColor,
+                          fontFamily: 'Roboto',
+                        ),
                       ),
                       const TextSpan(text: " and "),
                       TextSpan(
                         text: "Terms & Condition",
-                        style: TextStyle(color: MyColors.bottonColor),
+                        style: TextStyle(
+                          color: MyColors.bottonColor,
+                          fontFamily: 'Roboto',
+                        ),
                       ),
                     ],
                   ),
